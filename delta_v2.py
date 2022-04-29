@@ -63,5 +63,4 @@ def initialize():
 if __name__ == '__main__':
     os.system('cls')
     os.system('title Destroyer')
-    colorama.init()
     initialize()
