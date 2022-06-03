@@ -17,7 +17,7 @@ def main(webhook, username, delay, amount, message, hookDeleter):
     counter = 0
     while True if amount == "inf" else counter < int(amount):
         try:
-            data = requests.post(webhook, json={"content": str(message), "username": "be good 🤡", "avatar_url": "https://cdn.discordapp.com/attachments/964672130950242321/968902926028406834/unknown.png"})
+            data = requests.post(webhook, json={"content": str(message), "username": "USERNAME OF YOUR WEBHOOK", "avatar_url": "YOUR AVATAR URL"})
             if data.status_code == 204:
                 print(f"{colorama.Back.GREEN} {colorama.Fore.WHITE}[+] Sent{colorama.Back.RESET}")
             else:
@@ -44,11 +44,11 @@ def initialize():
                         by wwz
      """)
     webhook = input("url > ")
-    username = "be good 🤡"
+    username = "USERNAME OF YOUR WEBHOOK"
     message = input("Enter a message > ")
     delay = "1" 
     amount = input("Enter an amount > ")
-    hookDeleter = "true"
+    hookDeleter = "true or false"
     try:
         delay = float(delay)
     except ValueError:
